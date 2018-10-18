@@ -9,8 +9,9 @@ namespace Lab07_Collections.Classes
 
         public Suits CardSuits { get; set; }
 
-        public int CardValue { get; set; }
+        public CardValue CardFace { get; set; }
 
+    }
 
         public enum Suits
         {
@@ -19,5 +20,22 @@ namespace Lab07_Collections.Classes
             Clubs,
             Spades
         }
-    }
+
+        public enum CardValue
+        {
+            Ace = 1,
+            Two,
+            Three,
+            Four,
+            Five,
+            Six,
+            Seven,
+            Eight,
+            Nine,
+            Ten,
+            Jack,
+            Queen,
+            King
+
+        }
 }
