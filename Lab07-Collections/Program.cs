@@ -45,7 +45,6 @@ namespace Lab07_Collections
             deckOfCards.Add(cardTwelve);
             DisplayCards(deckOfCards);
 
-            //getting null exception
             Console.WriteLine("**Remove Card**");
             deckOfCards.RemoveCard(cardEleven);
             deckOfCards.RemoveCard(cardTwelve);
