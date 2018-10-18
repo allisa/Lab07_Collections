@@ -44,7 +44,44 @@ namespace XUnitTestProject1
             Assert.Equal(CardValue.Ace, testCard.CardFace);
         }
 
-        //need to add tests for remove but the method is not working
+        /// <summary>
+        /// Test to remove non-exixting card
+        /// </summary>
+        [Fact]
+        public void CanRemoveACardNonExisiting()
+        {
+            Card testCard = new Card() { CardSuits = Suits.Hearts, CardFace = CardValue.Ace };
+            Card testCard2 = new Card() { CardSuits = Suits.Diamonds, CardFace = CardValue.Ten };
+            Deck<Card> testdeck = new Deck<Card> { testCard };
+
+            testdeck.RemoveCard(testCard2);
+
+            Assert.Equal(1, testdeck.count);
+        }
+
+        /// <summary>
+        /// Can remove exisiting card
+        /// </summary>
+        [Fact]
+        public void CanRemoveExistingCard()
+        {
+            Card testCard = new Card() { CardSuits = Suits.Hearts, CardFace = CardValue.Ace };
+            Card testCard2 = new Card() { CardSuits = Suits.Diamonds, CardFace = CardValue.Ten };
+            Deck<Card> testdeck = new Deck<Card>
+            {
+                testCard, testCard2
+            };
+
+            testdeck.RemoveCard(testCard);
+            int count = 0;
+            foreach (Card card in testdeck)
+            {
+                if (card != null)
+                {
+                    count++;
+                }
+            }
+        }
 
     }
 }

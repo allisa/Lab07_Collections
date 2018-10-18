@@ -8,7 +8,7 @@ namespace Lab07_Collections.Classes
     public class Deck<T> : IEnumerable
     {
 
-        T[] deck = new T[10];
+        public T[] deck = new T[10];
         public int count = 0;
 
         public void Add(T card)
@@ -31,7 +31,7 @@ namespace Lab07_Collections.Classes
         {
             for (int i = 0; i < count; i++)
             {
-                if (deck[i].Equals(card))
+                if (deck[i] != null && deck[i].Equals(card))
                 {
                     deck.SetValue(null, i);
                     break; ;
@@ -52,7 +52,7 @@ namespace Lab07_Collections.Classes
             {
                 Card card = (Card)Convert.ChangeType(deck[i], typeof(Card));
                 {
-                    if (card.CardSuits == cardSuit)
+                    if (card != null && card.CardSuits == cardSuit)
                     {
                         newDeck.Add(card);
                     }
