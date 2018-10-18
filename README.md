@@ -7,4 +7,4 @@ Clone repository to your local machine. Open solution in Visual Studio. Make cha
 
 
 # Visual
-![Console App Screen Shot]
+![Console App Screen Shot](/Lab_07_Collections.png)
