@@ -6,4 +6,4 @@ Create a deck of cards from a collection and enums. Create methods to add cards 
 Clone repository to your local machine. Open solution in Visual Studio. Make changes as desired and run the console app to display cards.
 
 # Visual
-![Console App Screen Shot]("https://user-images.githubusercontent.com/17580143/47131428-66959e00-d253-11e8-8bf6-3ed6e0b23ea2.png")
+![Console App Screen Shot](/Lab07_Collections.png)
