@@ -14,21 +14,6 @@ namespace Lab07_Collections
         }
 
         /// <summary>
-        /// Method to display all cards in deck if not null
-        /// </summary>
-        /// <param name="deck"></param>
-        public static void DisplayCards(Deck<Card> deck)
-        {
-            foreach (Card card in deck)
-            {
-                if (card != null)
-                {
-                    Console.WriteLine($"{card.CardFace} of {card.CardSuits}");
-                }
-            }
-        }
-
-        /// <summary>
         /// Instantiate cards from Card class
         /// </summary>
         public static void CardTest()
@@ -61,13 +46,28 @@ namespace Lab07_Collections
             DisplayCards(deckOfCards);
 
             //getting null exception
-            //Console.WriteLine("**Remove Card**");
-            //deckOfCards.RemoveCard(cardEleven);
-            //deckOfCards.RemoveCard(cardTwelve);
-            //DisplayCards(deckOfCards);
+            Console.WriteLine("**Remove Card**");
+            deckOfCards.RemoveCard(cardEleven);
+            deckOfCards.RemoveCard(cardTwelve);
+            DisplayCards(deckOfCards);
 
             Console.WriteLine("**All cards in this suit**");
             DisplayCards(deckOfCards.ShowCardsInSuit(Suits.Spades));
+        }
+
+        /// <summary>
+        /// Method to display all cards in deck if not null
+        /// </summary>
+        /// <param name="deck"></param>
+        public static void DisplayCards(Deck<Card> deck)
+        {
+            foreach (Card card in deck)
+            {
+                if (card != null)
+                {
+                    Console.WriteLine($"{card.CardFace} of {card.CardSuits}");
+                }
+            }
         }
     }
 }

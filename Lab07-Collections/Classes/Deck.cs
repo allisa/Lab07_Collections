@@ -34,7 +34,7 @@ namespace Lab07_Collections.Classes
                 if (deck[i].Equals(card))
                 {
                     deck.SetValue(null, i);
-                    break;
+                    break; ;
                 }
             }
         }
